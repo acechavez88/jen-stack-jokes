@@ -3,8 +3,14 @@ console.log('client.js sourced');
 //Render joke data on load
 fetchJokes();
 
+// creating listener for add Joke
+$('#addJokeButton').on('click', onSubmit);
+
 $( document ).ready( onReady );
 
+function onSubmit() {
+    console.log('onSubmit add joke');
+}
 function onReady() {
     console.log('DOM ready');
 
