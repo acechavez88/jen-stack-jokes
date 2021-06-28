@@ -15,12 +15,12 @@ $.ajax({
         whoseJoke: $('#whoseJokeIn').val(),
         jokeQuestion: $('#questionIn').val(),
         punchLine: $('#punchlineIn').val(),
-        output:
+        
     }
 })
 .then(res => {
     console.log('POST res', res);
-    fetchjokes();
+    fetchJokes();
 })
 .catch(err => {
     console.log('POST failed', err);
