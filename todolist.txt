@@ -1,0 +1,54 @@
+[] Send requests to the server from client using an AJAX request(s),
+[] Display response on the DOM,
+[]Demonstrate the separation of logic between the client and the server.
+[] use provided joke date in initial server file 
+   [] (`server/server.js`).
+[] display the current jokes to the DOM
+    [] maybe an li?
+[] add the ability for users to add 
+    [] add an input? 
+
+
+
+========= the contract ==============
+    What does my state ("data") look like?
+What do my objects look like?
+-> What do my express APIs look like?
+
+Each "thing" is a "calculation":
+calculation = 
+{
+    whoseJoke: "Luke",,
+    jokeQuestion:"Two fish are in a tank. What did one fish say to the other?",
+    punchLine: "Do you know how to drive this thing?"
+}
+
+POST /calculations
+{
+    whoseJoke: "Luke",,
+    jokeQuestion:"Two fish are in a tank. What did one fish say to the other?",
+    punchLine: "Do you know how to drive this thing?"
+}
+
+GET /calculations
+[
+    {
+    whoseJoke: "Luke",,
+    jokeQuestion:"Two fish are in a tank. What did one fish say to the other?",
+    punchLine: "Do you know how to drive this thing?"
+        solution: 8 
+    },
+    {
+        firstNumber: 12,
+        secondNumber: 4,
+        operator: "+",
+        solution: 16 
+    },
+    ...
+]
+
+Overview
+--------
+[] when the app is loaded, all jokes should be displayed on the DOM below the inputs
+[] the user should be able to add jokes using the input form
+[] after a joke is added, the jokes displayed on the DOM should reflect the new data
