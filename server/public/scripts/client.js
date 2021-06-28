@@ -15,6 +15,7 @@ $.ajax({
         whoseJoke: $('#whoseJokeIn').val(),
         jokeQuestion: $('#questionIn').val(),
         punchLine: $('#punchlineIn').val(),
+        output:
     }
 })
 .then(res => {
@@ -24,4 +25,20 @@ $.ajax({
 .catch(err => {
     console.log('POST failed', err);
 })
+}
+
+// need to make fetchjokes function to run POST..
+function fetchjokes() {
+    $.ajax({
+        method: 'GET',
+        url: '/jokes'
+    })
+        .then(res => {
+            console.log('GET', res);
+
+            //ready to render
+            let lastJoke = res[res.length -1];
+            $('#outputDiv').text(lastJoke.output);
+        })
+    
 }
