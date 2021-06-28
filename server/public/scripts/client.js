@@ -28,7 +28,7 @@ $.ajax({
 }
 
 // need to make fetchjokes function to run POST..
-function fetchjokes() {
+function fetchJokes() {
     $.ajax({
         method: 'GET',
         url: '/jokes'
@@ -39,6 +39,20 @@ function fetchjokes() {
             //ready to render
             let lastJoke = res[res.length -1];
             $('#outputDiv').text(lastJoke.output);
-        })
+        }
     
+        // loop thru jokes
+        //and render 'jokes'
+        $('#outputDiv').empty();
+        for(let jokes of res) {
+            $('#outputDiv').append(`
+            <li>
+                ${jokes.whoseJoke} ${jokes.jokeQuestion} ${jokes.punchLine} = ${jokes.output}
+                <li>
+                `)
+            }
+        })
+        .catch(err => {
+            console.log('GET error', err);
+        })
 }
