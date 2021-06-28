@@ -1,5 +1,8 @@
 console.log('client.js sourced');
 
+//Render joke data on load
+fetchJokes();
+
 $( document ).ready( onReady );
 
 function onReady() {
@@ -27,7 +30,7 @@ $.ajax({
 })
 }
 
-// need to make fetchjokes function to run POST..
+// need to make fetch jokes function to run POST..
 function fetchJokes() {
     $.ajax({
         method: 'GET',
@@ -39,7 +42,7 @@ function fetchJokes() {
             //ready to render
             let lastJoke = res[res.length -1];
             $('#outputDiv').text(lastJoke.output);
-        }
+        
     
         // loop thru jokes
         //and render 'jokes'
