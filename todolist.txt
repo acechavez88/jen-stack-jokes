@@ -11,7 +11,11 @@
 [] add the ability for users to add 
     [] add an input? 
 
-
+server
+[]POST /jokes
+[]GET / jokes
+[] send back ok
+[] track history of jokes
 
 ========= the contract ==============
     What does my state ("data") look like?
@@ -39,13 +43,13 @@ GET /calculations
     whoseJoke: "Luke",,
     jokeQuestion:"Two fish are in a tank. What did one fish say to the other?",
     punchLine: "Do you know how to drive this thing?"
-        solution: 8 
+        output: 
     },
     {
-        firstNumber: 12,
-        secondNumber: 4,
-        operator: "+",
-        solution: 16 
+         whoseJoke: "Luke",,
+    jokeQuestion:"Two fish are in a tank. What did one fish say to the other?",
+    punchLine: "Do you know how to drive this thing?"
+        output: 
     },
     ...
 ]
