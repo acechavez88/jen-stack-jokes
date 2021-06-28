@@ -40,3 +40,15 @@ app.use(express.static('server/public'));
 app.listen(PORT, () => {
   console.log('server running on: ', PORT);
 }); // end spin up server
+
+
+//grab inputs and make jokes after add joke button submitted.
+app.post('/jokes', (req, res) => {
+  console.log('body', req.body);
+
+  let output = req.body.punchline;
+  let output;
+  if (output === '${#addjoke}') {
+    output =(req.body.whoseJoke)+(req.body.jokeQuestion)+(req.body.punchLine);
+  }
+})
